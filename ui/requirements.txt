@@ -1,0 +1,3 @@
+# 在仓库根目录执行：python -m pip install -r ui/requirements.txt
+Pillow==12.3.0
+streamlit==1.65.0

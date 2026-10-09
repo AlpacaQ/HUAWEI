@@ -1,0 +1,47 @@
+五张公开真实仪表照片：界面联调样本说明
+
+来源：Data for: Text detection and Recognition in Raw Image Dataset of Seven Segment Digital Energy Meter Display
+作者：KARTHICK K；Kavaskar S
+发布页：https://data.mendeley.com/datasets/fnn44p4mj8/1
+DOI：10.17632/fnn44p4mj8.1
+页面发布日期：2019-07-12；本次整理日期：2026-10-09
+许可：CC0 1.0（Public Domain Dedication）。本地保存的作者发布页 INITIAL_STATE 数据集元数据明确列出该许可；未执行网页脚本。
+许可链接：https://creativecommons.org/publicdomain/zero/1.0/
+
+内容与用途
+这是作者采集的真实七段数字电表照片，不是团队实拍，不是合成照片。
+五张只用于界面、分块、文件读取和传输时序的联调，不代表正式实验样本分布。
+它们是仪表近景，外围背景有限，后续正式实验建议增加保留周围设备和环境的巡检照片。
+reference_reading 留空，reading_status 明确为待人工核对。不得将作者的逐数字类别直接拼接后当作已经人工确认的读数；小数点、单位及前导零需逐图核实。
+
+字节与完整性
+现有 RAW IMAGES.zip 是先前未完成下载的文件：本地 25,106,899 字节，发布方元数据给出的完整包为 104,176,444 字节。
+本次没有下载新的完整数据集，也没有把这个残缺压缩包作为完整数据集使用。
+仅从已有 ZIP 本地文件头读取完整条目；每张恢复照片均核对 ZIP 声明的解压长度和 CRC32、Pillow verify/load、COCO 图像尺寸。遇到不完整条目立即停止。
+COCO JSON 的 SHA256 与发布方元数据一致：5b23d2380d433c218f2f26d800639c54dff51d74cb15ea9c842b0a552db3200b。
+五张 JPEG 保持原条目字节，不旋转、不缩放、不重新压缩；只改成本项目的文件名。每张 SHA256 保存于 data/meter_samples.json。
+这属于逐条目完整性校验，不声称完成了整个 ZIP 的发布方 SHA256 校验。
+
+ROI 初值方法
+读取每张图片对应的 COCO 数字矩形框，取全部数字框的并集；左右各扩大并集宽度的 5%，上下各扩大高度的 15%（均至少 8 像素），向外取整并限制在图片范围内。
+ROI 为 [left, top, right, bottom)，右下边界不包含，单位为像素。EXIF orientation 为 1，原图与 COCO 都是 2560×1440；无需旋转坐标。
+该 ROI 是依据公开人工标注得到的预设，不是自动目标检测结果，也不是用户已经确认的完整显示窗口。团队需要检查单位是否应纳入 ROI。
+data/meter_sample_annotations.json 保存这五张对应的原始 COCO 记录；data/meter_sample_provenance.json 保存条目名、CRC32、数字框并集与许可证据。
+SAMPLES_PREVIEW.jpg 是添加红色 ROI 和黄色网格的查看用缩略拼图；它不是输入原图，不能作为实验照片使用。
+
+文件对应
+images/meter_001.jpg <- RAW IMAGES/1)Day Light/1.JPG
+  SHA256: 1c7ded3bc0d5ba895e6eef02ba15af378ec2ef7673ecb705e7fba34d711e64ca
+  初始ROI: [307, 439, 1841, 1002]
+images/meter_002.jpg <- RAW IMAGES/1)Day Light/11.JPG
+  SHA256: e544a5f5d8963be910e63526cc19e229ff491b9baf9a8bcbae962a74218111b4
+  初始ROI: [1095, 204, 2357, 722]
+images/meter_003.jpg <- RAW IMAGES/1)Day Light/19.JPG
+  SHA256: c7be28b89faa243bd12fe3c3d4684250091413b21096cb8b396b3ee6ea848932
+  初始ROI: [466, 598, 1830, 1199]
+images/meter_004.jpg <- RAW IMAGES/1)Day Light/21.JPG
+  SHA256: 986d02a117368a93ea8208152df8910c644639eeb6f80f345ec5deb0a73604c8
+  初始ROI: [530, 347, 1861, 925]
+images/meter_005.jpg <- RAW IMAGES/1)Day Light/26.JPG
+  SHA256: c07cdd44f08933f6d2ca09b93fa5ca3f9e575274fb8344f9663ac4e5ab5dbd76
+  初始ROI: [527, 571, 1825, 1104]

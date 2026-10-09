@@ -1,5 +1,20 @@
 # 巡检图片重要区域优先传输系统
 
+## 三人联合界面
+
+石韵涵的界面位于 [ui](ui/README.md)，接入本仓库的图像和传输模块，支持上传照片、保存ROI、B/C同时间恢复对照和日志下载。完整启动与逐文件说明见界面README。
+
+在已安装依赖的Python环境中，从仓库根目录运行：
+
+```powershell
+python -m pip install -r ui/requirements.txt
+python start_ui.py
+```
+
+当前为固定有效速率的B/C软件联调，不是实测5G网络；A组、自动检测和动态画质尚未接入。界面通过集中字段适配连接两个现有模块，不修改或重复压缩B/C的JPEG文件。
+
+界面目前从原图生成分块；直接读取下面五图交付包中已有JPEG的入口尚未接入。ui自带公开样本的读数确认状态独立保存，不替代交付包记录。
+
 ## 五张真实仪表图片包
 
 朱雨萱和石韵涵请下载同一份 [五图交付ZIP](inspection_image/inspection_image_delivery_v2_5images.zip)（点击文件页的下载按钮），并对照 [SHA256](inspection_image/inspection_image_delivery_v2_5images.zip.sha256)。包内每张17个传输JPEG，5张共85个，合计4,123,492字节，无需重新压缩。

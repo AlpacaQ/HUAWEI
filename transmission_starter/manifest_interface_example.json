@@ -1,0 +1,105 @@
+{
+  "notice": "INTERFACE EXAMPLE ONLY: placeholder byte counts, no image files; not experimental data",
+  "thumbnail": {
+    "path": "thumbnail.jpg",
+    "bytes": 1
+  },
+  "tiles": [
+    {
+      "id": "tile_00",
+      "path": "tiles/tile_00.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_01",
+      "path": "tiles/tile_01.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_02",
+      "path": "tiles/tile_02.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_03",
+      "path": "tiles/tile_03.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_04",
+      "path": "tiles/tile_04.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_05",
+      "path": "tiles/tile_05.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_06",
+      "path": "tiles/tile_06.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_07",
+      "path": "tiles/tile_07.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_08",
+      "path": "tiles/tile_08.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_09",
+      "path": "tiles/tile_09.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_10",
+      "path": "tiles/tile_10.jpg",
+      "bytes": 1,
+      "is_roi": true
+    },
+    {
+      "id": "tile_11",
+      "path": "tiles/tile_11.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_12",
+      "path": "tiles/tile_12.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_13",
+      "path": "tiles/tile_13.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_14",
+      "path": "tiles/tile_14.jpg",
+      "bytes": 1,
+      "is_roi": false
+    },
+    {
+      "id": "tile_15",
+      "path": "tiles/tile_15.jpg",
+      "bytes": 1,
+      "is_roi": true
+    }
+  ]
+}

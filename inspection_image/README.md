@@ -1,10 +1,17 @@
 # 图像模块第一版 分阶段运行说明
 
+## 五张真实照片交付包
+
+交付文件为 `inspection_image_delivery_v2_5images.zip`，解压入口为 `delivery_v2/package_index.json`，公共接口见 `delivery_v2/共同接口说明.md`。5张每张17个传输JPEG，共85个，复用现有文件无需重新压缩。用户无法确认的meter02、meter04答案为null；不得算入读数准确率标签。其他确认状态详见逐图ground_truth.json。
+
+验收时从仓库根目录先执行 `Set-Location inspection_image`，再执行 `python verify_package.py delivery_v2`。仅下载ZIP的同学进入解压后的delivery_v2目录，运行 `python verify_package.py .`。下文合成调试命令也必须在inspection_image子目录运行。
+
 ## GitHub下载后的快速运行
 
-需要Python 3.10或以上。在仓库根目录运行（若电脑使用`py`命令，可将`python`换成`py`）：
+需要Python 3.10或以上。脚本实际位于 `inspection_image` 子目录：先从仓库根目录进入该目录，再运行下面命令（若电脑使用`py`命令，可将`python`换成`py`）：
 
 ```powershell
+Set-Location inspection_image
 python -m pip install -r requirements.txt
 python make_debug_sample.py
 python image_processing.py examples/debug_sample.png --roi 450 310 720 520 --output-dir examples/my_run01

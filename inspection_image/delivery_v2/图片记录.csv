@@ -1,0 +1,6 @@
+﻿image_id,answer,roi_xyxy_half_open,width,height,transmission_bytes,human_confirmation,source_page
+meter01,3.23 V (DC),"[1080, 800, 2050, 1120]",4736,3552,2704226,confirmed,https://commons.wikimedia.org/wiki/File:Testing_voltage_of_a_battery_using_a_digital_multimeter.jpg
+meter02,无法确认,"[590, 500, 1580, 910]",2272,1704,707431,unable_to_confirm,https://commons.wikimedia.org/wiki/File:Digital_thermometer.jpg
+meter03,22.9 °C; 40 %RH,"[1320, 800, 2800, 2260]",4119,3058,459239,pending,https://commons.wikimedia.org/wiki/File:2023_Czujnik_temperatury_i_wilgotności_Xiaomi_(1).jpg
+meter04,无法确认,"[380, 480, 535, 640]",857,1154,135729,unable_to_confirm,https://commons.wikimedia.org/wiki/File:Infrared_thermometer.JPG
+meter05,0.385 V (primary); 000.0 (auxiliary display),"[279, 53, 562, 210]",672,800,116867,pending,https://commons.wikimedia.org/wiki/File:Digital_Multimeter_Aka.jpg

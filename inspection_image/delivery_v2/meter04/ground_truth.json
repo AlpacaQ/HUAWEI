@@ -1,0 +1,48 @@
+{
+  "image_id": "meter04",
+  "file_title": "Infrared_thermometer.JPG",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Infrared_thermometer.JPG",
+  "author": "Cjp24",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "roi": [
+    380,
+    480,
+    535,
+    640
+  ],
+  "reading_text": null,
+  "value": null,
+  "unit": null,
+  "measurement": "temperature",
+  "answer_summary": "无法确认",
+  "unit_evidence": "用户无法确认读数或单位；最终答案不采用候选视觉判断。",
+  "unconfirmed_by_user": true,
+  "source_metadata_note": "源图为真实照片，来源作者在照片上添加了指示激光点的黑圈；该标记在LCD之外。",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Infrared_thermometer.JPG",
+  "source_type": "public_real_photograph",
+  "not_field_data_of_team": true,
+  "processed_size": [
+    857,
+    1154
+  ],
+  "changes": "原图按下载字节保存；衍生图做EXIF校正、RGB转换、缩略、分块JPEG编码或ROI标注。衍生图沿用本图来源许可。",
+  "visual_review": {
+    "by": "Codex",
+    "date": "2026-10-09",
+    "status": "unresolved_after_user_review",
+    "roi": "完整LCD显示区域"
+  },
+  "human_confirmation": {
+    "status": "unable_to_confirm",
+    "by": "本聊天用户",
+    "date": "2026-10-09",
+    "reply": "无法确认",
+    "flagged_image_ids": [
+      "meter02",
+      "meter04"
+    ]
+  },
+  "ground_truth_status": "unconfirmed",
+  "use_for_reading_accuracy": false
+}

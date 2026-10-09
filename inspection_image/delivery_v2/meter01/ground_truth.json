@@ -1,0 +1,33 @@
+{
+  "image_id": "meter01",
+  "source_type": "public_real_photograph",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Testing_voltage_of_a_battery_using_a_digital_multimeter.jpg",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Testing_voltage_of_a_battery_using_a_digital_multimeter.jpg",
+  "author": "Jiazheng0609",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "changes": "原图按下载字节保存；衍生图做EXIF校正、RGB转换、缩略、分块JPEG编码或ROI标注。衍生图沿用CC BY-SA 4.0。",
+  "processed_size": [
+    4736,
+    3552
+  ],
+  "roi": [
+    1080,
+    800,
+    2050,
+    1120
+  ],
+  "reading_text": "3.23",
+  "value": 3.23,
+  "unit": "V",
+  "measurement": "DC voltage",
+  "unit_evidence": "LCD不显示单位；旋钮指向直流电压20V档，来源说明亦记载3.23 V。",
+  "human_confirmation": {
+    "status": "confirmed",
+    "by": "本聊天用户",
+    "date": "2026-10-09",
+    "reply": "确认，正确答案为3.23 V（直流）"
+  },
+  "roi_review": "Codex视觉核对：框包含完整LCD显示区域。",
+  "not_field_data_of_team": true
+}

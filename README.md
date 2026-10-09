@@ -1,5 +1,18 @@
 # 巡检图片重要区域优先传输系统
 
+## 五张真实仪表图片包
+
+朱雨萱和石韵涵请下载同一份 [五图交付ZIP](inspection_image/inspection_image_delivery_v2_5images.zip)（点击文件页的下载按钮），并对照 [SHA256](inspection_image/inspection_image_delivery_v2_5images.zip.sha256)。包内每张17个传输JPEG，5张共85个，合计4,123,492字节，无需重新压缩。
+
+也可直接浏览 [图片包目录](inspection_image/delivery_v2)、[共同接口说明](inspection_image/delivery_v2/共同接口说明.md)和[逐图记录](inspection_image/delivery_v2/图片记录.csv)。priority=1为重点、0为背景。meter02与meter04按用户反馈保留null答案；meter03与meter05为视觉核对、人工确认待完成。人工已确认的meter01读数为3.23 V（直流）。这些照片来自公开来源，每张附来源和许可。
+
+从仓库根目录验收：
+
+```powershell
+Set-Location inspection_image
+python verify_package.py delivery_v2
+```
+
 图像模块位于 [`inspection_image`](inspection_image/README.md)。包含正常朝向及RGB转换、ROI校验、4×4 JPEG分块、清单生成和人工检查工具。
 
 ```powershell

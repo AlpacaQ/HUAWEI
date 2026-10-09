@@ -1,0 +1,14 @@
+[
+  {
+    "source_page": "https://commons.wikimedia.org/wiki/File:Laboratory_electronic_thermometer.jpg",
+    "answer": null,
+    "reason": "LCD没有可辨认的数字；不猜测为0。",
+    "included_in_five": false
+  },
+  {
+    "source_page": "https://commons.wikimedia.org/wiki/File:Laboratory_digital_thermometer.jpg",
+    "answer": null,
+    "reason": "LCD反光且没有可辨认的读数；不猜测。",
+    "included_in_five": false
+  }
+]

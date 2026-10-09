@@ -1,0 +1,44 @@
+{
+  "image_id": "meter05",
+  "file_title": "Digital_Multimeter_Aka.jpg",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Digital_Multimeter_Aka.jpg",
+  "author": "André Karwath aka Aka",
+  "license": "CC BY-SA 2.5",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.5/",
+  "roi": [
+    279,
+    53,
+    562,
+    210
+  ],
+  "reading_text": "0.385",
+  "value": 0.385,
+  "unit": "V",
+  "measurement": "voltage",
+  "answer_summary": "0.385 V (primary); 000.0 (auxiliary display)",
+  "auxiliary_display": {
+    "reading_text": "000.0",
+    "unit": null,
+    "note": "辅助显示单位/含义未可靠辨认，不推测。"
+  },
+  "unit_evidence": "主LCD直接显示0.385及V；未将辅助显示000.0误认为主读数。",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Digital_Multimeter_Aka.jpg",
+  "source_type": "public_real_photograph",
+  "not_field_data_of_team": true,
+  "processed_size": [
+    672,
+    800
+  ],
+  "changes": "原图按下载字节保存；衍生图做EXIF校正、RGB转换、缩略、分块JPEG编码或ROI标注。衍生图沿用本图来源许可。",
+  "visual_review": {
+    "by": "Codex",
+    "date": "2026-10-09",
+    "status": "readable",
+    "roi": "完整LCD显示区域"
+  },
+  "human_confirmation": {
+    "status": "pending"
+  },
+  "ground_truth_status": "visually_reviewed",
+  "use_for_reading_accuracy": true
+}

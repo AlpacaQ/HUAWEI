@@ -1,0 +1,32 @@
+[
+  {
+    "image_id": "meter01",
+    "jpeg_count": 17,
+    "total_size_bytes": 2704226,
+    "verified": true
+  },
+  {
+    "image_id": "meter02",
+    "jpeg_count": 17,
+    "total_size_bytes": 707431,
+    "verified": true
+  },
+  {
+    "image_id": "meter03",
+    "jpeg_count": 17,
+    "total_size_bytes": 459239,
+    "verified": true
+  },
+  {
+    "image_id": "meter04",
+    "jpeg_count": 17,
+    "total_size_bytes": 135729,
+    "verified": true
+  },
+  {
+    "image_id": "meter05",
+    "jpeg_count": 17,
+    "total_size_bytes": 116867,
+    "verified": true
+  }
+]

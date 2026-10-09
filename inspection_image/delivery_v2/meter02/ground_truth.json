@@ -1,0 +1,48 @@
+{
+  "image_id": "meter02",
+  "file_title": "Digital_thermometer.jpg",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Digital_thermometer.jpg",
+  "author": "Lukas Ribisch (Zxb), as credited in original upload log",
+  "source_metadata_note": "当前摘要署名Blazer404，与原始上传记录不一致；保留原始摄影者及来源页供追溯。",
+  "license": "CC BY-SA 2.5",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.5/",
+  "roi": [
+    590,
+    500,
+    1580,
+    910
+  ],
+  "reading_text": null,
+  "value": null,
+  "unit": null,
+  "measurement": "temperature",
+  "answer_summary": "无法确认",
+  "unit_evidence": "用户无法确认读数或单位；最终答案不采用候选视觉判断。",
+  "unconfirmed_by_user": true,
+  "source_page": "https://commons.wikimedia.org/wiki/File:Digital_thermometer.jpg",
+  "source_type": "public_real_photograph",
+  "not_field_data_of_team": true,
+  "processed_size": [
+    2272,
+    1704
+  ],
+  "changes": "原图按下载字节保存；衍生图做EXIF校正、RGB转换、缩略、分块JPEG编码或ROI标注。衍生图沿用本图来源许可。",
+  "visual_review": {
+    "by": "Codex",
+    "date": "2026-10-09",
+    "status": "unresolved_after_user_review",
+    "roi": "完整LCD显示区域"
+  },
+  "human_confirmation": {
+    "status": "unable_to_confirm",
+    "by": "本聊天用户",
+    "date": "2026-10-09",
+    "reply": "无法确认",
+    "flagged_image_ids": [
+      "meter02",
+      "meter04"
+    ]
+  },
+  "ground_truth_status": "unconfirmed",
+  "use_for_reading_accuracy": false
+}

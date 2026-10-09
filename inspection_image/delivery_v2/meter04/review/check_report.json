@@ -1,0 +1,7 @@
+{
+  "pre_encoding_pixel_equal": true,
+  "jpeg_pixel_equal": false,
+  "total_size_bytes": 135729,
+  "image_processing_seconds": 0.14492829982191324,
+  "note": "JPEG像素差异属于有损编码，不作为裁剪错误判据；检查图片和PNG不计入传输字节数"
+}

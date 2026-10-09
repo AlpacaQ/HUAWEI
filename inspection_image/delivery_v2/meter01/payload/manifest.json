@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "image_id": "meter01",
+  "source_name": "original.jpg",
+  "width": 4736,
+  "height": 3552,
+  "mode": "RGB",
+  "roi": [
+    1080,
+    800,
+    2050,
+    1120
+  ],
+  "coordinate_convention": "[x0,y0,x1,y1), top-left inclusive, bottom-right exclusive",
+  "grid": {
+    "rows": 4,
+    "cols": 4
+  },
+  "thumbnail": {
+    "image_id": "meter01",
+    "payload": "thumbnail.jpg",
+    "size_bytes": 8461,
+    "width": 256,
+    "height": 192,
+    "quality": 50
+  },
+  "tiles": [
+    {
+      "image_id": "meter01",
+      "tile_id": 0,
+      "box": [
+        0,
+        0,
+        1184,
+        888
+      ],
+      "x": 0,
+      "y": 0,
+      "w": 1184,
+      "h": 888,
+      "priority": 1,
+      "quality": 80,
+      "payload": "tile_00.jpg",
+      "size_bytes": 153531
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 1,
+      "box": [
+        1184,
+        0,
+        2368,
+        888
+      ],
+      "x": 1184,
+      "y": 0,
+      "w": 1184,
+      "h": 888,
+      "priority": 1,
+      "quality": 80,
+      "payload": "tile_01.jpg",
+      "size_bytes": 164127
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 2,
+      "box": [
+        2368,
+        0,
+        3552,
+        888
+      ],
+      "x": 2368,
+      "y": 0,
+      "w": 1184,
+      "h": 888,
+      "priority": 0,
+      "quality": 80,
+      "payload": "tile_02.jpg",
+      "size_bytes": 168297
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 3,
+      "box": [
+        3552,
+        0,
+        4736,
+        888
+      ],
+      "x": 3552,
+      "y": 0,
+      "w": 1184,
+      "h": 888,
+      "priority": 0,
+      "quality": 80,
+      "payload": "tile_03.jpg",
+      "size_bytes": 177076
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 4,
+      "box": [
+        0,
+        888,
+        1184,
+        1776
+      ],
+      "x": 0,
+      "y": 888,
+      "w": 1184,
+      "h": 888,
+      "priority": 1,
+      "quality": 80,
+      "payload": "tile_04.jpg",
+      "size_bytes": 181383
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 5,
+      "box": [
+        1184,
+        888,
+        2368,
+        1776
+      ],
+      "x": 1184,
+      "y": 888,
+      "w": 1184,
+      "h": 888,
+      "priority": 1,
+      "quality": 80,
+      "payload": "tile_05.jpg",
+      "size_bytes": 149622
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 6,
+      "box": [
+        2368,
+        888,
+        3552,
+        1776
+      ],
+      "x": 2368,
+      "y": 888,
+      "w": 1184,
+      "h": 888,
+      "priority": 0,
+      "quality": 80,
+      "payload": "tile_06.jpg",
+      "size_bytes": 173214
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 7,
+      "box": [
+        3552,
+        888,
+        4736,
+        1776
+      ],
+      "x": 3552,
+      "y": 888,
+      "w": 1184,
+      "h": 888,
+      "priority": 0,
+      "quality": 80,
+      "payload": "tile_07.jpg",
+      "size_bytes": 120578
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 8,
+      "box": [
+        0,
+        1776,
+        1184,
+        2664
+      ],
+      "x": 0,
+      "y": 1776,
+      "w": 1184,
+      "h": 888,
+      "priority": 0,
+      "quality": 80,
+      "payload": "tile_08.jpg",
+      "size_bytes": 194571
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 9,
+      "box": [
+        1184,
+        1776,
+        2368,
+        2664
+      ],
+      "x": 1184,
+      "y": 1776,
+      "w": 1184,
+      "h": 888,
+      "priority": 0,
+      "quality": 80,
+      "payload": "tile_09.jpg",
+      "size_bytes": 170231
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 10,
+      "box": [
+        2368,
+        1776,
+        3552,
+        2664
+      ],
+      "x": 2368,
+      "y": 1776,
+      "w": 1184,
+      "h": 888,
+      "priority": 0,
+      "quality": 80,
+      "payload": "tile_10.jpg",
+      "size_bytes": 189806
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 11,
+      "box": [
+        3552,
+        1776,
+        4736,
+        2664
+      ],
+      "x": 3552,
+      "y": 1776,
+      "w": 1184,
+      "h": 888,
+      "priority": 0,
+      "quality": 80,
+      "payload": "tile_11.jpg",
+      "size_bytes": 141537
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 12,
+      "box": [
+        0,
+        2664,
+        1184,
+        3552
+      ],
+      "x": 0,
+      "y": 2664,
+      "w": 1184,
+      "h": 888,
+      "priority": 0,
+      "quality": 80,
+      "payload": "tile_12.jpg",
+      "size_bytes": 187664
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 13,
+      "box": [
+        1184,
+        2664,
+        2368,
+        3552
+      ],
+      "x": 1184,
+      "y": 2664,
+      "w": 1184,
+      "h": 888,
+      "priority": 0,
+      "quality": 80,
+      "payload": "tile_13.jpg",
+      "size_bytes": 190116
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 14,
+      "box": [
+        2368,
+        2664,
+        3552,
+        3552
+      ],
+      "x": 2368,
+      "y": 2664,
+      "w": 1184,
+      "h": 888,
+      "priority": 0,
+      "quality": 80,
+      "payload": "tile_14.jpg",
+      "size_bytes": 196087
+    },
+    {
+      "image_id": "meter01",
+      "tile_id": 15,
+      "box": [
+        3552,
+        2664,
+        4736,
+        3552
+      ],
+      "x": 3552,
+      "y": 2664,
+      "w": 1184,
+      "h": 888,
+      "priority": 0,
+      "quality": 80,
+      "payload": "tile_15.jpg",
+      "size_bytes": 137925
+    }
+  ],
+  "total_size_bytes": 2704226,
+  "image_processing_seconds": 0.7337623999919742,
+  "processing_time_scope": "image read through JPEG writes and file size reads; excludes manifest write"
+}

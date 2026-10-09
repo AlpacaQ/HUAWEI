@@ -1,0 +1,48 @@
+{
+  "image_id": "meter03",
+  "file_title": "2023_Czujnik_temperatury_i_wilgotności_Xiaomi_(1).jpg",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/2023_Czujnik_temperatury_i_wilgotno%C5%9Bci_Xiaomi_%281%29.jpg",
+  "author": "Jacek Halicki",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "roi": [
+    1320,
+    800,
+    2800,
+    2260
+  ],
+  "reading_text": "22.9",
+  "value": 22.9,
+  "unit": "°C",
+  "measurement": "temperature",
+  "answer_summary": "22.9 °C; 40 %RH",
+  "additional_readings": [
+    {
+      "measurement": "relative humidity",
+      "reading_text": "40",
+      "value": 40,
+      "unit": "%RH",
+      "display_unit": "%"
+    }
+  ],
+  "unit_evidence": "LCD上行显示22.9 °C，下行显示40%；来源为温湿度传感器。表情图标不作为数值。",
+  "source_page": "https://commons.wikimedia.org/wiki/File:2023_Czujnik_temperatury_i_wilgotności_Xiaomi_(1).jpg",
+  "source_type": "public_real_photograph",
+  "not_field_data_of_team": true,
+  "processed_size": [
+    4119,
+    3058
+  ],
+  "changes": "原图按下载字节保存；衍生图做EXIF校正、RGB转换、缩略、分块JPEG编码或ROI标注。衍生图沿用本图来源许可。",
+  "visual_review": {
+    "by": "Codex",
+    "date": "2026-10-09",
+    "status": "readable",
+    "roi": "完整LCD显示区域"
+  },
+  "human_confirmation": {
+    "status": "pending"
+  },
+  "ground_truth_status": "visually_reviewed",
+  "use_for_reading_accuracy": true
+}

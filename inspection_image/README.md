@@ -1,5 +1,7 @@
 # 图像模块第一版 分阶段运行说明
 
+A组整图传输已补齐：运行与共同接口见 [README_A.md](README_A.md)，编码脚本为 `image_processing_A.py`，独立输出为 `delivery_A_v1`。直接交接 `inspection_image_delivery_A_v1.zip`，不重新压缩B/C包。
+
 ## 五张真实照片交付包
 
 交付文件为 `inspection_image_delivery_v2_5images.zip`，解压入口为 `delivery_v2/package_index.json`，公共接口见 `delivery_v2/共同接口说明.md`。5张每张17个传输JPEG，共85个，复用现有文件无需重新压缩。用户无法确认的meter02、meter04答案为null；不得算入读数准确率标签。其他确认状态详见逐图ground_truth.json。

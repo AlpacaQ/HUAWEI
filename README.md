@@ -1,5 +1,16 @@
 # 巡检图片重要区域优先传输系统
 
+## A组整图传输
+
+直接下载 [A组整图包](inspection_image/inspection_image_delivery_A_v1.zip)，对照 [SHA256](inspection_image/inspection_image_delivery_A_v1.zip.sha256)。5张原图分别编码成质量80的完整JPEG，与B/C的朝向和尺寸一致；5个full.jpg合计4,036,569字节，队友无需重新压缩。
+
+[A组目录与清单](inspection_image/delivery_A_v1)独立于B/C图片包，详见 [运行和接口说明](inspection_image/README_A.md)。从仓库根目录先进入inspection_image，再验收：
+
+```powershell
+Set-Location inspection_image
+python image_processing_A.py --bc-package delivery_v2 --output-dir delivery_A_v1 --verify-only
+```
+
 ## 五张真实仪表图片包
 
 朱雨萱和石韵涵请下载同一份 [五图交付ZIP](inspection_image/inspection_image_delivery_v2_5images.zip)（点击文件页的下载按钮），并对照 [SHA256](inspection_image/inspection_image_delivery_v2_5images.zip.sha256)。包内每张17个传输JPEG，5张共85个，合计4,123,492字节，无需重新压缩。

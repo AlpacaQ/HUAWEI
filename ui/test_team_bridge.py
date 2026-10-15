@@ -72,21 +72,13 @@ class TeamBridgeTests(unittest.TestCase):
         for name, original_hash in original_hashes.items():
             self.assertEqual(hashlib.sha256((image_dir / name).read_bytes()).hexdigest(), original_hash)
 
-    def test_view_reused_without_rewriting_and_mismatch_rejected(self):
+    def test_canonical_simulation_does_not_create_derived_files(self):
+        before = {path.name: path.read_bytes() for path in self.manifest_path.parent.iterdir()}
         bridge.simulate(self.manifest_path, 1, "B")
-        view_path = self.manifest_path.parent / bridge.TRANSMISSION_VIEW_NAME
-        before = view_path.stat().st_mtime_ns
-        before_bytes = view_path.read_bytes()
         bridge.simulate(self.manifest_path, 5, "C")
-        self.assertEqual(view_path.read_bytes(), before_bytes)
-        self.assertEqual(view_path.stat().st_mtime_ns, before)
-        bad = json.loads(before_bytes)
-        bad["tiles"][0]["is_roi"] = not bad["tiles"][0]["is_roi"]
-        view_path.write_text(json.dumps(bad), encoding="utf-8")
-        changed_bytes = view_path.read_bytes()
-        with self.assertRaisesRegex(ValueError, "拒绝覆盖"):
-            bridge.simulate(self.manifest_path, 1, "B")
-        self.assertEqual(view_path.read_bytes(), changed_bytes)
+        after = {path.name: path.read_bytes() for path in self.manifest_path.parent.iterdir()}
+        self.assertEqual(before, after)
+        self.assertFalse((self.manifest_path.parent / "manifest_for_transmission.json").exists())
 
     def test_metadata_does_not_open_jpegs(self):
         original_open = Path.open
@@ -150,6 +142,29 @@ class TeamBridgeTests(unittest.TestCase):
         normalized.pop("total_size_bytes")
         self.manifest_path.write_text(json.dumps(normalized), encoding="utf-8")
         self.assertEqual(bridge.load_ui_manifest(self.manifest_path), normalized)
+        result = bridge.simulate(self.manifest_path, 1, "C")
+        self.assertEqual(len(result["events"]), 17)
+        self.assertEqual(result["events"][0]["packet_id"], "thumb")
+
+    def test_full_image_metadata_and_native_transmission(self):
+        full_path = bridge.REPOSITORY_ROOT / "inspection_image/delivery_A_v1/meter05/manifest_A.json"
+        original_open = Path.open
+
+        def guarded_open(path, *args, **kwargs):
+            if path.suffix.lower() in (".jpg", ".jpeg"):
+                self.fail("A组元数据检查提前打开了JPEG")
+            return original_open(path, *args, **kwargs)
+
+        with mock.patch.object(Path, "open", guarded_open):
+            manifest = bridge.load_ui_manifest(full_path)
+        self.assertEqual(manifest["group"], "A")
+        self.assertEqual([p["packet_id"] for p in manifest["packets"]], ["full"])
+        for rate in (0.25, 1, 5):
+            result = bridge.simulate(full_path, rate, "A")
+            self.assertEqual(len(result["events"]), 1)
+            self.assertEqual(result["events"][0]["packet_id"], "full")
+            self.assertEqual(result["roi_complete_s"], result["full_complete_s"])
+            self.assertEqual(result["full_complete_s"], manifest["total_size_bytes"] * 8 / (rate * 1_000_000))
 
     def test_backend_metadata_identifies_actual_module_bytes(self):
         metadata = bridge.backend_metadata()

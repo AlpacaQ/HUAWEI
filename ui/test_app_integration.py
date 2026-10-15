@@ -25,6 +25,7 @@ class AppIntegrationTests(unittest.TestCase):
         environment.start()
         self.addCleanup(environment.stop)
         self.app = AppTest.from_file(str(Path(__file__).resolve().with_name("app.py")), default_timeout=30).run()
+        self.app.radio(key="workflow").set_value("上传与 ROI 调试 B/C").run()
         self.assert_clean()
 
     def assert_clean(self):

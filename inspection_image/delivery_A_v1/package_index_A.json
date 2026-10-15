@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "group": "A",
+  "image_count": 5,
+  "quality": 80,
+  "images": [
+    {
+      "image_id": "meter01",
+      "manifest": "meter01/manifest_A.json",
+      "payload": "meter01/full.jpg",
+      "size_bytes": 2682295
+    },
+    {
+      "image_id": "meter02",
+      "manifest": "meter02/manifest_A.json",
+      "payload": "meter02/full.jpg",
+      "size_bytes": 685439
+    },
+    {
+      "image_id": "meter03",
+      "manifest": "meter03/manifest_A.json",
+      "payload": "meter03/full.jpg",
+      "size_bytes": 444442
+    },
+    {
+      "image_id": "meter04",
+      "manifest": "meter04/manifest_A.json",
+      "payload": "meter04/full.jpg",
+      "size_bytes": 126838
+    },
+    {
+      "image_id": "meter05",
+      "manifest": "meter05/manifest_A.json",
+      "payload": "meter05/full.jpg",
+      "size_bytes": 97555
+    }
+  ],
+  "total_size_bytes": 4036569,
+  "path_base": "package_index_A.json directory; each manifest payload is relative to its own directory"
+}

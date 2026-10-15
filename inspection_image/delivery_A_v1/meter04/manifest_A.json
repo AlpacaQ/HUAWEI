@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "group": "A",
+  "image_id": "meter04",
+  "source_name": "original.jpg",
+  "source_sha256": "97598c34cac121a02afa36981159af77af016c574cf7eeb2dfa89ca5aeedbc69",
+  "payload": "full.jpg",
+  "width": 857,
+  "height": 1154,
+  "mode": "RGB",
+  "quality": 80,
+  "size_bytes": 126838,
+  "total_size_bytes": 126838,
+  "payload_sha256": "e71218c21d59fdb2550797b9e1649600caf48af5420c92e7f06081703e2533c9",
+  "image_processing_seconds": 0.014514700043946505,
+  "processing_time_scope": "starts before source read; includes EXIF transpose, RGB conversion, output directory creation, full JPEG encoding/write and size read; excludes SHA256, manifest write, verification and packaging",
+  "preprocessing": "image_processing.load_processed_image: EXIF transpose then RGB; no resize; metadata cleared",
+  "payload_path_base": "directory containing manifest_A.json"
+}

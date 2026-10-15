@@ -157,21 +157,27 @@ def _manifest_checked(manifest_path):
     packets = manifest.get("packets")
     if not isinstance(packets, list):
         raise ValueError("清单中的packets必须是列表。")
-    expected_ids = {"thumb"} | {f"tile_{i:02d}" for i in range(16)}
+    # A组只有一个整图JPEG；B/C组共用缩略图和16块JPEG。
+    # 不在这里读取JPEG：接收画面只能使用已经完整到达的内容。
+    is_full_image = manifest.get("group") == "A"
+    expected_ids = {"full"} if is_full_image else {"thumb"} | {f"tile_{i:02d}" for i in range(16)}
     packet_map = {}
     for packet in packets:
         if not isinstance(packet, dict):
             raise ValueError("清单中的图片包格式不正确。")
         packet_id = packet.get("packet_id")
         if not isinstance(packet_id, str) or packet_id not in expected_ids or packet_id in packet_map:
-            raise ValueError("图片包编号错误或重复，应为thumb和tile_00至tile_15。")
+            expected_description = "full" if is_full_image else "thumb和tile_00至tile_15"
+            raise ValueError(f"图片包编号错误或重复，应为{expected_description}。")
         bbox = _roi_checked(packet.get("bbox"), width, height)
         priority = packet.get("priority")
-        valid_priority = (0,) if packet_id == "thumb" else (1, 2)
+        valid_priority = (1,) if is_full_image else ((0,) if packet_id == "thumb" else (1, 2))
         if isinstance(priority, bool) or not isinstance(priority, int) or priority not in valid_priority:
             raise ValueError(f"{packet_id}的priority不正确。")
         if packet_id == "thumb" and bbox != (0, 0, width, height):
             raise ValueError("缩略图的bbox必须覆盖整张图片。")
+        if packet_id == "full" and bbox != (0, 0, width, height):
+            raise ValueError("A组整图的bbox必须覆盖整张图片。")
         _positive_int(packet.get("nbytes"), f"{packet_id}的nbytes")
         file_name = packet.get("file")
         if not isinstance(file_name, str) or not file_name:
@@ -186,6 +192,8 @@ def _manifest_checked(manifest_path):
             raise ValueError("JPEG路径不能指向清单目录之外。") from exc
         packet_map[packet_id] = (packet, file_path)
     if set(packet_map) != expected_ids:
+        if is_full_image:
+            raise ValueError("A组清单必须只包含1张整图JPEG。")
         raise ValueError("清单必须包含1张缩略图和完整的16个图片块。")
     if not any(packet["priority"] == 1 for packet, _ in packet_map.values()):
         raise ValueError("清单至少需要一个priority=1的重点块。")
@@ -220,7 +228,10 @@ def _events_checked(events, packet_map):
 
 
 def render_received(manifest_path, events, t) -> tuple[Image.Image, dict]:
-    """恢复时刻t的接收画面；decode_ms表示本次恢复耗时，不是累计时延。"""
+    """恢复时刻t的画面；A组收齐整图后才显示，B/C组逐块覆盖。
+
+    decode_ms表示本次恢复耗时，不是累计时延；tiles_received在A组为0或1。
+    """
     t = _nonnegative_time(t, "模拟时刻t")
     manifest, packet_map = _manifest_checked(manifest_path)
     events = _events_checked(events, packet_map)

@@ -80,7 +80,12 @@ def check_result(manifest: dict, result: dict, mode: str, rate: float) -> None:
 # 1. 页面入口：测试模块与队友模块明确区分。
 st.set_page_config(page_title="巡检图片优先传输", page_icon="📷", layout="wide")
 st.title("巡检图片重要区域优先传输")
-st.caption("石韵涵 · 界面与接收端 · B/C联合调试")
+st.caption("三人联合原型 · 图片处理、传输计时与接收端对照")
+workflow = st.sidebar.radio("使用方式", ["共享图片包 A/B/C", "上传与 ROI 调试 B/C"], key="workflow")
+if workflow == "共享图片包 A/B/C":
+    from shared_view import show_shared_comparison
+    show_shared_comparison(ROOT, check_result)
+    st.stop()
 try:
     catalog = load_sample_catalog(ROOT)
     catalog_error = None
@@ -338,7 +343,7 @@ download_b.download_button("下载 B 组时间表", data=run["csv"]["B"], file_n
 download_c.download_button("下载 C 组时间表", data=run["csv"]["C"], file_name=f"{run['run_id']}_C.csv", mime="text/csv")
 download_record.download_button("下载本次参数记录", data=(ROOT / "logs" / f"{run['run_id']}_record.json").read_bytes(), file_name=f"{run['run_id']}_record.json", mime="application/json")
 st.caption("时间表和本次配置也已自动保存到 logs 文件夹，均带有接口联调标识。")
-st.caption("尚未接入A组整图基线、自动ROI检测或动态画质；本轮先验证B/C联调。")
+st.caption("本上传调试入口比较 B/C；共享图片包入口可比较 A/B/C。自动 ROI 检测与动态画质尚未实现。")
 with st.expander("查看图片处理耗时和统计范围"):
     st.write(run["manifest"].get("processing_ms", "当前图像模块未提供处理耗时。"))
     if run["manifest"].get("processing_note"):

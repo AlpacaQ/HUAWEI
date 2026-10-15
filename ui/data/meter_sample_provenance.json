@@ -1,0 +1,136 @@
+{
+  "source_url": "https://data.mendeley.com/datasets/fnn44p4mj8/1",
+  "doi": "10.17632/fnn44p4mj8.1",
+  "license": {
+    "id": "02c4e271-e833-4ed1-856d-f4085d84e0d3",
+    "short_name": "CC0 1.0",
+    "full_name": "Public Domain Dedication",
+    "description": "You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.",
+    "url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "category": "Creative",
+    "customer_id": null
+  },
+  "source_annotation_file": "export-coco-2019-06-11T14_40_00.348423.json",
+  "source_annotation_sha256": "5b23d2380d433c218f2f26d800639c54dff51d74cb15ea9c842b0a552db3200b",
+  "source_archive_expected_bytes": 104176444,
+  "source_archive_local_bytes": 25106899,
+  "source_archive_complete": false,
+  "selected_entries": [
+    {
+      "source_filename": "1.JPG",
+      "zip_entry": "RAW IMAGES/1)Day Light/1.JPG",
+      "zip_crc32": "f1951b01",
+      "sha256": "1c7ded3bc0d5ba895e6eef02ba15af378ec2ef7673ecb705e7fba34d711e64ca",
+      "width": 2560,
+      "height": 1440,
+      "annotation_image_id": "cjwrlne8jmisw0811g13rhw6i",
+      "exif_orientation": 1,
+      "roi_union": [
+        377.0,
+        504.0,
+        1771.0,
+        937.0
+      ],
+      "annotation_ids": [
+        967,
+        968,
+        969,
+        970,
+        971,
+        972
+      ]
+    },
+    {
+      "source_filename": "11.JPG",
+      "zip_entry": "RAW IMAGES/1)Day Light/11.JPG",
+      "zip_crc32": "a65e996e",
+      "sha256": "e544a5f5d8963be910e63526cc19e229ff491b9baf9a8bcbae962a74218111b4",
+      "width": 2560,
+      "height": 1440,
+      "annotation_image_id": "cjwrrfvz0q3em0836afaopcn6",
+      "exif_orientation": 1,
+      "roi_union": [
+        1153.0,
+        264.0,
+        2299.0,
+        662.0
+      ],
+      "annotation_ids": [
+        828,
+        829,
+        830,
+        831,
+        832
+      ]
+    },
+    {
+      "source_filename": "19.JPG",
+      "zip_entry": "RAW IMAGES/1)Day Light/19.JPG",
+      "zip_crc32": "e19cb707",
+      "sha256": "c7be28b89faa243bd12fe3c3d4684250091413b21096cb8b396b3ee6ea848932",
+      "width": 2560,
+      "height": 1440,
+      "annotation_image_id": "cjwrm3odtmth20836com3he4b",
+      "exif_orientation": 1,
+      "roi_union": [
+        528.0,
+        668.0,
+        1768.0,
+        1129.0
+      ],
+      "annotation_ids": [
+        887,
+        888,
+        889,
+        890,
+        891
+      ]
+    },
+    {
+      "source_filename": "21.JPG",
+      "zip_entry": "RAW IMAGES/1)Day Light/21.JPG",
+      "zip_crc32": "9b39d625",
+      "sha256": "986d02a117368a93ea8208152df8910c644639eeb6f80f345ec5deb0a73604c8",
+      "width": 2560,
+      "height": 1440,
+      "annotation_image_id": "cjwrluzzymoi808364f3vc5ek",
+      "exif_orientation": 1,
+      "roi_union": [
+        591.0,
+        414.0,
+        1800.0,
+        858.0
+      ],
+      "annotation_ids": [
+        929,
+        930,
+        931,
+        932,
+        933
+      ]
+    },
+    {
+      "source_filename": "26.JPG",
+      "zip_entry": "RAW IMAGES/1)Day Light/26.JPG",
+      "zip_crc32": "96f2e68c",
+      "sha256": "c07cdd44f08933f6d2ca09b93fa5ca3f9e575274fb8344f9663ac4e5ab5dbd76",
+      "width": 2560,
+      "height": 1440,
+      "annotation_image_id": "cjwrs8ox3poub0800gdgz4fmm",
+      "exif_orientation": 1,
+      "roi_union": [
+        586.0,
+        633.0,
+        1766.0,
+        1042.0
+      ],
+      "annotation_ids": [
+        785,
+        786,
+        787,
+        788,
+        789
+      ]
+    }
+  ]
+}

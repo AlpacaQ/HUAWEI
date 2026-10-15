@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "name": "Data for: Text detection and Recognition in Raw Image Dataset of Seven Segment Digital Energy Meter Display",
+    "url": "https://data.mendeley.com/datasets/fnn44p4mj8/1",
+    "license": "CC0 1.0"
+  },
+  "samples": [
+    {
+      "sample_id": "meter_001",
+      "file": "images/meter_001.jpg",
+      "source_filename": "1.JPG",
+      "sha256": "1c7ded3bc0d5ba895e6eef02ba15af378ec2ef7673ecb705e7fba34d711e64ca",
+      "width": 2560,
+      "height": 1440,
+      "roi": [
+        307,
+        439,
+        1841,
+        1002
+      ],
+      "roi_origin": "公开COCO数字框取并集；左右各加并集宽度5%、上下各加高度15%（至少8像素），取整并限制在图像内；待人工核对是否包含任务所需单位。",
+      "reference_reading": "",
+      "reading_status": "待人工核对读数、小数点和单位；不得用于读数准确率统计"
+    },
+    {
+      "sample_id": "meter_002",
+      "file": "images/meter_002.jpg",
+      "source_filename": "11.JPG",
+      "sha256": "e544a5f5d8963be910e63526cc19e229ff491b9baf9a8bcbae962a74218111b4",
+      "width": 2560,
+      "height": 1440,
+      "roi": [
+        1095,
+        204,
+        2357,
+        722
+      ],
+      "roi_origin": "公开COCO数字框取并集；左右各加并集宽度5%、上下各加高度15%（至少8像素），取整并限制在图像内；待人工核对是否包含任务所需单位。",
+      "reference_reading": "",
+      "reading_status": "待人工核对读数、小数点和单位；不得用于读数准确率统计"
+    },
+    {
+      "sample_id": "meter_003",
+      "file": "images/meter_003.jpg",
+      "source_filename": "19.JPG",
+      "sha256": "c7be28b89faa243bd12fe3c3d4684250091413b21096cb8b396b3ee6ea848932",
+      "width": 2560,
+      "height": 1440,
+      "roi": [
+        466,
+        598,
+        1830,
+        1199
+      ],
+      "roi_origin": "公开COCO数字框取并集；左右各加并集宽度5%、上下各加高度15%（至少8像素），取整并限制在图像内；待人工核对是否包含任务所需单位。",
+      "reference_reading": "",
+      "reading_status": "待人工核对读数、小数点和单位；不得用于读数准确率统计"
+    },
+    {
+      "sample_id": "meter_004",
+      "file": "images/meter_004.jpg",
+      "source_filename": "21.JPG",
+      "sha256": "986d02a117368a93ea8208152df8910c644639eeb6f80f345ec5deb0a73604c8",
+      "width": 2560,
+      "height": 1440,
+      "roi": [
+        530,
+        347,
+        1861,
+        925
+      ],
+      "roi_origin": "公开COCO数字框取并集；左右各加并集宽度5%、上下各加高度15%（至少8像素），取整并限制在图像内；待人工核对是否包含任务所需单位。",
+      "reference_reading": "",
+      "reading_status": "待人工核对读数、小数点和单位；不得用于读数准确率统计"
+    },
+    {
+      "sample_id": "meter_005",
+      "file": "images/meter_005.jpg",
+      "source_filename": "26.JPG",
+      "sha256": "c07cdd44f08933f6d2ca09b93fa5ca3f9e575274fb8344f9663ac4e5ab5dbd76",
+      "width": 2560,
+      "height": 1440,
+      "roi": [
+        527,
+        571,
+        1825,
+        1104
+      ],
+      "roi_origin": "公开COCO数字框取并集；左右各加并集宽度5%、上下各加高度15%（至少8像素），取整并限制在图像内；待人工核对是否包含任务所需单位。",
+      "reference_reading": "",
+      "reading_status": "待人工核对读数、小数点和单位；不得用于读数准确率统计"
+    }
+  ]
+}
